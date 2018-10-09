@@ -14,13 +14,30 @@
       <div class="form__top">
         <h2> Aplicación <span> Web </span></h2>
       </div>
-      <form class="form__reg" action="">
-        <input class="input" type="text" name="numero1" placeholder="Ingrese el primer Número" id="numero1"required autofocus>
+      <div class="form__reg">
+        <input class="input" type="text" name="numero1" placeholder="Ingrese el primer Número" id="numero1" required autofocus>
         <input class="input" type="text" name="numero2" placeholder="Ingrese el segundo Número" id="numero2" required>
           <div class="btn__form">
-              <input class="btn__submit" type="submit" value="INICIAR" onclick="calcular()">
+              <input class="btn__submit" type="button" value="INICIAR" onclick="calcular()">
           </div>
-      </form>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="form__top">
+        <h2> El Resultado <span> Es:</span></h2>
+      </div>
+      <div class="form__reg">
+        <h3>Cantidad</h3>
+        <input class="input" type="text" name="cantidad" id="cantidad" value="0">
+        <h3>Promedio</h3>
+        <input class="input" type="text" name="promedio" id="promedio" value="0">
+        <h3>Números</h3>
+        <input class="input" type="text" name="numeros" id="numeros" value="0">
+          <div class="btn__form">
+              <input class="btn__reset" type="button" value="Reiniciar ">
+          </div>
+      </div>
     </div>
 
     <script src="./JavaScript/scripts.js"></script>
