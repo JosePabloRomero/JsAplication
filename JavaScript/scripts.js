@@ -7,12 +7,11 @@ function calcular()
   var nDivisores=0;
   var cantidad=0;
   var divisores=0;
-  //window.open("../resultado.html");
+  var numeros= "";
+
   if (numero1 < numero2)
   {
-    /*Se evalua si el numero 1 es menor a numero 2, y la instrucción siguiente
-    convierte el rango de numeros en un intervalo abierto.
-    */
+
     numero1 = numero1 + 1;
     numero2 = numero2 - 1;
 
@@ -20,15 +19,16 @@ function calcular()
     {
       for (var k = 1; k <= i; i++)
       {
-        if (i % k == 0)
+        if ((i % k) == 0)
         {
           contador = contador + 1;
         }
       }
 
-      if (contador > 10) {
+      if (contador > 10)
+      {
         divisores = document.getElementById("numeros").value;
-        numeros.textContent = (divisores+" "+i);
+        numeros = (divisores+" "+i);
         promedio = promedio + i;
         nDivisores = nDivisores + 1;
         contador = 0;
@@ -41,10 +41,15 @@ function calcular()
     alert("El primer numero debe de ser menor que el segundo");
   }
 
-  if (nDivisores != 0)
+
+  if (nDivisores !== 0)
   {
-    promedio = promedio / nDivisores;
-    promedio.textContent = (promedio);
-    cantidad.textContent = (nDivisores);
+
+    //promedio = (promedio / nDivisores);
+    document.write("Cantidad: "+cantidad+" | Promedio: "+promedio+" | Numeros: "+numeros);
+    //document.getElementById("promedio").value = (promedio);
+    //document.getElementById("cantidad").value = (cantidad;
   }
+
+
 }
